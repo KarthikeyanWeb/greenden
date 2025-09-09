@@ -1,0 +1,40 @@
+<input type="text" id="searchbar" placeholder="Search here....">
+<div class="container">
+  <h1>One</h1>
+  <h1>two</h1>
+  <h1>three</h1>
+  <h1>four</h1>
+  <h1>five</h1>
+  <h1>six</h1>
+  <h1>seven</h1>
+  <h1>eight</h1>
+  <h1>nine</h1>
+  <h1>ten</h1>
+</div>
+<script>
+
+var searchbar = document.getElementById("searchbar")
+var container = document.querySelector(".container")
+var h1List = container.querySelectorAll("h1")
+searchbar.addEventListener("keyup",function(){
+
+  var enteredValue = event.target.value.toUpperCase() 
+  console.log(enteredValue)
+
+  for(count =0; count<h1List.length; count = count+1){
+
+    if(h1List[count].textContent.toUpperCase().indexOf(enteredValue)<0){
+
+      h1List[count].style.display="none"
+
+    } else {
+
+      h1List[count].style.display="block"
+
+    }
+  }
+
+
+})
+
+</script>

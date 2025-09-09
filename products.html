@@ -11,7 +11,7 @@
    <!-- Responsive Navbar -->
      <nav class="bg-green-100 p-3 flex items-center justify-between shadow-xl sticky top-0 z-10">
         <h1 class="text-2xl">Greenden</h1>
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6 md:hidden">
+      <svg id="menuicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6 md:hidden">
   <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
 </svg>
 
@@ -33,13 +33,33 @@
 
         </ul>
      </nav>
+<!-- Sidebar Navbar-->
+<section id="sidenav" class="bg-green-100 fixed z-20 top-0 transition-all duration-1000" style="width: 50%; height: 100vh; right: -50%;">
+     <div class="text-right p-5">
+            <p id="close" class="inline cursor-pointer ">x</p>
+        </div>
+    <ul class="flex flex-col items-center gap-10 text-gray-600">
+       
+            <li>
+                <a href="index.html" class="hover:underline">Home</a>
+            </li>
 
+             <li>
+                <a href="products.html" class="hover:underline">Products</a>
+            </li>
+
+             <li>
+                <a href="contact.html" class="hover:underline">Contact</a>
+            </li>
+
+        </ul>
+</section>
 
 <!-- Products Section -->
 <section class="p-4 text-center">
         <h1 class="font-bold mt-5 text-3xl">Our Products</h1>
-        <input type="text" placeholder="search for a product" class="p-3 mt-3 border border-black" style="width: 80%;">
-        <div class="grid grid-cols-2 mt-5 gap-2 md:grid-cols-4">
+        <input type="text" id="searchbar" placeholder="search for a product" class="p-3 mt-3 border border-black" style="width: 80%;">
+        <div id="product-container" class="grid grid-cols-2 mt-5 gap-2 md:grid-cols-4">
             <div>
                 <img src="./images/bestseller_1.jpg" class="inline hover:shadow-xl transform hover:-translate-y-2" alt="">
                 <h1>Rose Plant</h1>
@@ -134,6 +154,11 @@
         <p>The Standard chunk of lorem ipsum since the 1500s is reprodused below for those interest</p>
         <p>@ 2025 Greenday.com</p>
         </section>
+
+
+        <script src="./product.js">
+
+        </script>
 </body>
 </html>
 
